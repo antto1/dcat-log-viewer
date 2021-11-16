@@ -1,0 +1,36 @@
+{
+    "name": "antto/dcat-log-viewer",
+    "alias": "Dcat Log Viewer",
+    "description": "Log viewer for DcatAdmin",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "dcat-admin",
+        "extension"
+    ],
+    "homepage": "https://gitee.com/anttoweb/dcat-log-viewer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antto",
+            "email": "info@anttoweb.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Antto\\LogViewer\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Antto\\LogViewer\\DcatLogViewerServiceProvider",
+        "laravel": {
+            "providers": [
+                "Antto\\LogViewer\\DcatLogViewerServiceProvider"
+            ]
+        }
+    }
+}
