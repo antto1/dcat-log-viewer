@@ -58,7 +58,7 @@ class DcatLogViewerController extends AdminController
     {
         $grid = Grid::make(new LogFile($data), function (Grid $grid) use ($logViewer) {
             $grid->column('time')->width(200);
-            $grid->column('env')->label();
+            $grid->column('env')->width(130)->label();
             $grid->column('level')
                 ->width(130)
                 ->label([
