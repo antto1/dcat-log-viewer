@@ -1,5 +1,7 @@
 # Dcat Log Viewer
 
+![Screenshot](https://images.gitee.com/uploads/images/2021/1116/185428_643e7adf_1454183.png "Screenshot.png")
+
 ## 安装
 
 ```bash
