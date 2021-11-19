@@ -85,6 +85,16 @@ class LogViewer
     }
 
     /**
+     * Get time of log file.
+     *
+     * @return int
+     */
+    public function getFiletime()
+    {
+        return date('Y-m-d H:i:s', filectime($this->filePath));
+    }
+
+    /**
      * Get size of log file.
      *
      * @return int

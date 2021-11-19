@@ -37,7 +37,7 @@ class DcatLogViewerController extends AdminController
         return $content
             ->breadcrumb($this->title())
             ->title($this->title())
-            ->description("{$logViewer->getFilePath()} ({$logViewer->getFilesizeHuman()})")
+            ->description("{$logViewer->getFilePath()} ( {$logViewer->getFiletime()} [{$logViewer->getFilesizeHuman()}] )")
             ->body(function (Row $row) use ($logViewer, $data) {
                 $row->column(10, $this->fileContentList($logViewer, $data));
                 $row->column(2, function (Column $column) use ($logViewer) {
@@ -58,7 +58,7 @@ class DcatLogViewerController extends AdminController
     {
         $grid = Grid::make(new LogFile($data), function (Grid $grid) use ($logViewer) {
             $grid->column('time')->width(200);
-            $grid->column('env')->width(130)->label();
+            $grid->column('env')->width(100)->label();
             $grid->column('level')
                 ->width(130)
                 ->label([
@@ -78,7 +78,7 @@ class DcatLogViewerController extends AdminController
                     if ($this->trace == '') {
                         return '';
                     }
-                    return "<textarea class='form-control' style='height:70vh; pointer-events: none;' disabled>$this->trace</textarea>";
+                    return "<textarea class='form-control' style='height:70vh;' disabled>$this->trace</textarea>";
                 });
 
             $file = $logViewer->getFile();
