@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-composer install antto/dcat-log-viewer
+composer require antto/dcat-log-viewer
 ```
 
 ## 开启扩展
