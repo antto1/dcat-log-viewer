@@ -65,7 +65,9 @@ class LogViewer
             $path = sprintf(storage_path('logs/%s'), $this->file);
 
             if (!file_exists($path)) {
-                throw new \Exception('log not exists!');
+                // throw new \Exception('log not exists!');
+                // create log file if not exists
+                touch($path);
             }
 
             $this->filePath = $path;
